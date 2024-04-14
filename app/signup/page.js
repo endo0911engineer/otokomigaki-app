@@ -16,6 +16,7 @@ export default function SignUp() {
 
     const [registerError, setRegisterError] = useState('');
 
+    //SignUpボタンが押された時の処理
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
@@ -36,34 +37,36 @@ export default function SignUp() {
     return (
         <div className={styles.signup}>
             <div className={styles.form_wrapper}>
-            <h1>SignUp</h1>
-            <form onSubmit={handleRegister}>
-                <div className={styles.form_item}>
-                    <label for="email"></label>
-                    <input name="email" type="email" placeholder="Email"
-                    onChange={(e) => setEmail(e.target.value)} value={email}
-                    />
+                <h1>SignUp</h1>
+                <form onSubmit={handleRegister}>
+                    <div className={styles.form_item}>
+                        <label for="email"></label>
+                        <input name="email" type="email" placeholder="Email"
+                        onChange={(e) => setEmail(e.target.value)} value={email}
+                        />
+                    </div>
+                    
+                    <div className={styles.form_item}>
+                        <label for="password"></label>
+                        <input name="password" type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}
+                        value={password}
+                        />
+                    </div>
+                    
+                    <div className={styles.button_panel}>
+                        <button type="submit">REGISTER</button>
+                    </div>
+                </form>
+                
+                {registerError && <div>
+                    {registerError}
+                </div>}
+                
+                <div className={styles.form_footer}>
+                    <p>Already have an account? <br />
+                    Login　⇒　<Link href="../login">here</Link>
+                    </p>
                 </div>
-
-                <div className={styles.form_item}>
-                    <label for="password"></label>
-                    <input name="password" type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}
-                    value={password}
-                    />
-                </div>
-                <div className={styles.button_panel}>
-                    <button type="submit">REGISTER</button>
-                </div>
-            </form>
-            {registerError && <div>
-                {registerError}
-            </div>}
-
-            <div className={styles.form_footer}>
-                <p>Already have an account? <br />
-                Login　⇒　<Link href="../login">here</Link>
-                </p>
-            </div>
             </div>
         </div>
     );

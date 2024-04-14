@@ -53,6 +53,7 @@
     color: #ee3e52;
 }
 
+
 /*login*/
 .login .form_wrapper {
     background: #fafafa;
@@ -60,21 +61,17 @@
     padding: 0 1em;
     max-width: 370px;
 }
-  
 .login h1 {
     text-align: center;
     padding: 1em 0;
 }
-  
 .login form {
     padding: 0 1.5em;
 }
-  
 .login .form_item {
     margin-bottom: 0.75em;
     width: 100%;
 }
-  
 .login .form_item input {
     background: #fafafa;
     border: none;
@@ -86,17 +83,14 @@
     transition: border-color 0.3s;
     width: 100%;
 }
-  
 .login .form_item input:focus {
     border-bottom: 2px solid #c0c0c0;
     outline: none;
 }
-  
 .login .button_panel {
     margin: 2em 0 0;
     width: 100%;
 }
-  
 .login .button_panel button {
     background: #f16272;
     border: none;
@@ -111,23 +105,19 @@
     transition: 0.3s ease-in-out;
     width: 100%;
 }
-  
 .login button:hover {
     background: #ee3e52;
 }
-  
 .login .form_footer {
     font-size: 1em;
     padding: 2em 0;
     text-align: center;
 }
-  
 .login .form_footer a {
     color: #8c8c8c;
     text-decoration: none;
     transition: border-color 0.3s;
 }
-  
 .login .form_footer a:hover {
     border-bottom: 1px dotted #8c8c8c;
 }
@@ -140,21 +130,17 @@
     padding: 0 1em;
     max-width: 370px;
 }
-  
 .signup h1 {
     text-align: center;
     padding: 1em 0;
 }
-  
 .signup form {
     padding: 0 1.5em;
 }
-  
 .signup .form_item {
     margin-bottom: 0.75em;
     width: 100%;
 }
-  
 .signup .form_item input {
     background: #fafafa;
     border: none;
@@ -166,17 +152,14 @@
     transition: border-color 0.3s;
     width: 100%;
 }
-  
 .signup .form_item input:focus {
     border-bottom: 2px solid #c0c0c0;
     outline: none;
 }
-  
 .signup .button_panel {
     margin: 2em 0 0;
     width: 100%;
 }
-  
 .signup .button_panel button {
     background: #f16272;
     border: none;
@@ -191,23 +174,19 @@
     transition: 0.3s ease-in-out;
     width: 100%;
 }
-  
 .signup button:hover {
     background: #ee3e52;
 }
-  
 .signup .form_footer {
     font-size: 1em;
     padding: 2em 0;
     text-align: center;
 }
-  
 .signup .form_footer a {
     color: #8c8c8c;
     text-decoration: none;
     transition: border-color 0.3s;
 }
-  
 .signup .form_footer a:hover {
     border-bottom: 1px dotted #8c8c8c;
 }
@@ -223,21 +202,17 @@
     padding: 0 1em;
     max-width: 370px;
 }
-  
 .mypage h1 {
     text-align: center;
     padding: 1em 0;
 }
-  
 .mypage form {
     padding: 0 1.5em;
 }
-  
 .mypage .form_item {
     margin-bottom: 0.75em;
     width: 100%;
 }
-  
 .mypage .form_date input {
     background: #fafafa;
     border: none;
@@ -249,7 +224,6 @@
     transition: border-color 0.3s;
     width: 100%;
 }
-
 .mypage .form_happiness textarea {
     background: #fafafa;
     border: none;
@@ -283,12 +257,10 @@
     transition: border-color 0.3s;
     width: 100%;
 }
-
 .mypage .button_panel {
     margin: 2em 0 0;
     width: 100%;
 }
-  
 .mypage .button_panel button {
     background: #f16272;
     border: none;
@@ -303,23 +275,20 @@
     transition: 0.3s ease-in-out;
     width: 100%;
 }
-  
 .mypage button:hover {
     background: #ee3e52;
 }
-  
 .mypage .form_footer {
     font-size: 1em;
     padding: 2em 0;
     text-align: center;
 }
-  
 .mypage .form_footer a {
     color: #8c8c8c;
     text-decoration: none;
     transition: border-color 0.3s;
 }
-  .mypage .form_footer a:hover {
+.mypage .form_footer a:hover {
     border-bottom: 1px dotted #8c8c8c;
 }
 .mypage .menu_item a{
@@ -336,12 +305,15 @@
     position: relative;
 }
 .mypage .drop_menu_list {
-    background-color: #fafafa;
+    background-color: #FFD5EC	;
     position: absolute;
     top: 100%;
     visibility: hidden;
     width: max-content;
     z-index: 1;
+}
+.mypage .drop_menu_item{
+    margin-left: -30px;
 }
 .mypage .old_diary{
     margin-right: 100px;

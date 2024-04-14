@@ -14,6 +14,7 @@ export default function Login() {
 
     const router = useRouter();
 
+    //loginボタンが押された時の処理
     const handleLogin = async (e) => {
         e.preventDefault();
         try{
@@ -21,8 +22,9 @@ export default function Login() {
             setEmail('');
             setPassword('');
             setLoginError('');
-            const userId = auth.currentUser.uid;
 
+            //userIdによってmypageのURLを決める
+            const userId = auth.currentUser.uid;
             router.push(`../mypage/${userId}`);
         } catch(error) {
             setLoginError(error.message);
@@ -32,34 +34,35 @@ export default function Login() {
     return (
         <div className={styles.login}>
             <div className={styles.form_wrapper}>
-            <h1>Login</h1>
-            <form onSubmit={handleLogin}>
-                <div className={styles.form_item}>
-                    <label for="email"></label>
-                    <input name="email" type="email" placeholder="Email" 
-                    onChange={(e) => setEmail(e.target.value)} value={email}/>
-                </div>
-                <div className={styles.form_item}>
-                    <input name="password" type="password" placeholder="Password" 
-                    onChange={(e) => setPassword(e.target.value)} value={password}/>
-                </div>
-                <div className={styles.button_panel}>
-                    <button type="submit">
-                        LOGIN
-                    </button>
-                </div>
-            </form>
+                <h1>Login</h1>
+                <form onSubmit={handleLogin}>
+                    <div className={styles.form_item}>
+                        <label for="email"></label>
+                        <input name="email" type="email" placeholder="Email" 
+                        onChange={(e) => setEmail(e.target.value)} value={email}/>
+                    </div>
+                    <div className={styles.form_item}>
+                        <input name="password" type="password" placeholder="Password" 
+                        onChange={(e) => setPassword(e.target.value)} value={password}/>
+                    </div>
 
-            {loginError && <div>
-            {loginError}
-            </div>}
-
-            <div className={styles.form_footer}>
-                <p>Dont have an account?<br /> 
-                Create One　⇒　
-                <Link href="../signup">here</Link>
-                </p>
-            </div>
+                    <div className={styles.button_panel}>
+                        <button type="submit">
+                            LOGIN
+                        </button>
+                    </div>
+                </form>
+                
+                {loginError && <div>
+                {loginError}
+                </div>}
+                
+                <div className={styles.form_footer}>
+                    <p>Dont have an account?<br /> 
+                    Create One　⇒　
+                    <Link href="../signup">here</Link>
+                    </p>
+                </div>
             </div>
         </div>
     );

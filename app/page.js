@@ -12,7 +12,7 @@ export default function Home() {
           Login
           </Link>
         </div>
-
+        
         <div className={styles.function}>
           <Link href="./signup">
           Signup
